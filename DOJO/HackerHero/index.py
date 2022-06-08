@@ -69,6 +69,34 @@ def q14(arr):
         arr[i] = val*val
     return arr
 
+def q15(arr):
+    for i, val in enumerate(arr):
+        if val < 0:
+            arr[i] = 0
+    return arr
+
+def q16(arr):
+    sum = 0
+    for i in arr:
+        sum += i
+    return sum
+
+def q17(arr):
+    max = arr[0]
+    for i in arr:
+        if i > max:
+            max = i
+    return max
+
+def q18(arr):
+   return min(arr)
+
+
+
+
+
+
+
 
        
        
