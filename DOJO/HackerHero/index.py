@@ -91,6 +91,61 @@ def q17(arr):
 def q18(arr):
    return min(arr)
 
+#Given an array with multiple values, write a function that returns a new array with two elements. The first value in the new array should be the minimum value in the original array. The second value in the new array should be the maximum value in the original array.
+
+# For example, findMinMax([1,3,5]) should return [1, 5]. Similarly, findMinMax([-1,-3,10]) should return [-3, 10].
+
+def q19(arr):
+    return [min(arr), max(arr)]
+
+def q20(arr):
+    count=0;
+    for i in arr:
+        if i > 0:
+            count+=1
+    arr[-1] = count
+    return arr
+def q21(arr):
+    sum = 0
+    for i in arr:
+        if arr[1] < i:
+            print(i)
+            sum +=i
+    return sum
+
+def q22(num1, num2):
+    arr = []
+    arr = [num2 for i in range(num1)]
+    return arr
+
+def q23(arr):
+    arr.pop(0)
+
+    for i, in arr:
+        arr[i] += 7
+
+    return arr
+
+def q24(arr):
+    if len(arr) < 2:
+        return False
+    arr2 = []
+    for i in arr:
+        if arr[1] < i:
+            arr2.append(i)
+    return arr2
+
+def q25(arr):
+    first  = arr.pop(0)
+    last  = arr.pop(-1)
+
+    arr.insert(0, last)
+    arr.append(first)
+
+    return arr
+
+
+    
 
 
 
