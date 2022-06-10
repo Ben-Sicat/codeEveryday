@@ -144,6 +144,104 @@ def q25(arr):
 
     return arr
 
+# Basic algo Hacker Hero
+
+def q1(num1, num2):
+    return num1 + num2
+
+def q2():
+    for i in range(2019, 0 , -8):
+        print(i)
+
+def q3(cDegrees):
+    f = (9/5)*cDegrees+32
+    return f
+
+def q4(arr):
+    for i in range(len(arr)):
+        if arr[i] > 0:
+            arr[i] = 'big'
+    return arr
+ 
+def q5(arr):
+    for i in range(len(arr)):
+        arr[i]  *= 2
+    return arr
+
+def q5():
+    counter = 0
+    for i in range(len(arr)):
+        if arr[i] > y:
+            counter+=1
+    return counter
+
+def q6(num):
+    sum = 0 
+    for i in range(1, num+1):
+        sum+=i
+    return sum   
+
+def q7(num):
+    sum = 1 
+    for i in range(1, num+1):
+        sum=i*sum
+    return sum   
+
+def q8():
+    return 0 
+def q9():
+     return 0 
+def q10():
+     return 0 
+def q11():
+    return 0 
+def q12():
+     return 0 
+def q13():
+     return 0 
+def q14():
+     return 0 
+def q15():
+    return 0 
+def q16():
+     return 0 
+def q17():
+    return 0 
+def q18():
+     return 0 
+def q19():
+     return 0 
+def q20():
+     return 0 
+def q21():
+     return 0 
+def q22():
+     return 0 
+def q23():
+     return 0 
+def q24():
+     return 0 
+def q25():
+     return 0 
+def q26():
+     return 0 
+def q27():
+     return 0 
+def q28():
+     return 0 
+def q29():
+     return 0 
+
+
+
+
+
+
+
+
+
+
+
 
     
 
