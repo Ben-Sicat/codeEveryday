@@ -188,42 +188,21 @@ def q7(num):
     return sum   
 
 def q8():
-    sum = 1 
-    for i in range(1, num+1):
-        sum=i*sum
-    return sum   
+    return 0 
 def q9(arr):
-    # arrNew = [len(arr)]
-    # count = 0
-    # for i in range(len(arr)-1, -1, -1):
-    #     arrNew[count] = arr[i]
-    #     print(count)
-    #     count += 1
-    # print(arr)        dunno why this shit ain't working
-    # return arrNew
-    res = arr[::-1]
-    return res
+    arrNew = [len(arr)]
+    count = 0
+    for i in range(len(arr)-1, -1, -1):
+        arrNew[count] = arr[i]
+        count+=1
+    print(arr)
+    return arrNew
 def q10():
-    sum = 0
-    for i in range(1,num):
-        if i % 3 !=0 and i % 5 != 0:
-            sum += i
-    return sum
-def q11(index):
-    if index ==  0:
-        return 0
-
-    elif index == 1 or index == 2:
-        return 1
-    else:
-        return q11(index-1) + q11(index-2)
-def q12(num):
-    if (num == 0):
-        return 0
-    if (num % 9 == 0):
-        return 9
-    else:
-        return (num % 9) 
+     return 0 
+def q11():
+    return 0 
+def q12():
+     return 0 
 def q13():
      return 0 
 def q14():
