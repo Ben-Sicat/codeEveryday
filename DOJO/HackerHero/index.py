@@ -1,3 +1,4 @@
+from collections import  defaultdict
 # print("Hellow World")\
 
 # this is a prerequisite for village88 and I chose to answer all of them in python as a practice and force myself to learn the language since I started this whole shit with Javascript and C++
@@ -94,6 +95,9 @@
 #Given an array with multiple values, write a function that returns a new array with two elements. The first value in the new array should be the minimum value in the original array. The second value in the new array should be the maximum value in the original array.
 
 # For example, findMinMax([1,3,5]) should return [1, 5]. Similarly, findMinMax([-1,-3,10]) should return [-3, 10].
+
+from re import L
+
 
 def q19(arr):
     return [min(arr), max(arr)]
@@ -230,12 +234,15 @@ def q13(seconds):
 # for Inpute 3600 secs (1 hour), return [30,0,0]) meaning the hour hand is at 30 degrees, the minute hand is at 0 degrees, and the second hand is at 0 degrees.
 # Similarly, clockHandAngles(10800) shoud return [90,0,0] as  10800 seconds is equivalent to 3:00:00.
     arrNew = []
-    hour = (360/12)*q12(seconds/3600)
-    minute = (360/60)*q12(seconds/60)
-    second = (360/60)*q12(seconds)
-    arrNew.append(hour.__floor__())
-    arrNew.append(minute.__floor__())
-    arrNew.append(second.__floor__())
+    h = (360/12)*q12(seconds/3600)
+    m = (360/60)*q12(seconds/60)
+    s = (360/60)*q12(seconds)
+    arrNew.append(h.__floor__())
+    arrNew.append(m.__floor__())
+    arrNew.append(s.__floor__())
+    # for i in range(3):
+    #     arr.append(q12(seconds/60*i))
+    
     return arrNew
 def q14():
     return 0 
@@ -270,9 +277,19 @@ def q28():
 def q29():
      return 0 
 
+#breathd first search
+
+class  Graph:
+    #constructor
+    def __init__ (sef):
+        #default dictionary  to store graph
+        self.graph = defaultdict(list)
+    def addEdge(self,u,v):
+        self.graph[u].append(v)
 
 
-print(q9([1,2,3,4,5]))
+
+print(q13(3600))
 
 
 
