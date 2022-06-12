@@ -168,7 +168,7 @@ def q5(arr):
         arr[i]  *= 2
     return arr
 
-def q5():
+def q5(arr,y):
     counter = 0
     for i in range(len(arr)):
         if arr[i] > y:
@@ -187,7 +187,7 @@ def q7(num):
         sum=i*sum
     return sum   
 
-def q8():
+def q8(num):
     sum = 1 
     for i in range(1, num+1):
         sum=i*sum
@@ -203,7 +203,7 @@ def q9(arr):
     # return arrNew
     res = arr[::-1]
     return res
-def q10():
+def q10(num):
     sum = 0
     for i in range(1,num):
         if i % 3 !=0 and i % 5 != 0:
@@ -224,14 +224,25 @@ def q12(num):
         return 9
     else:
         return (num % 9) 
-def q13():
-     return 0 
+def q13(seconds):
+#Given a number of seconds sing 12:00:00, returns angles(in degreees) of the hour, minute, and second hands.
+# As review, 260 degrees form a full rotation. Have the degree round up as a whole number (e.g. 38 instead of 37.632)
+# for Inpute 3600 secs (1 hour), return [30,0,0]) meaning the hour hand is at 30 degrees, the minute hand is at 0 degrees, and the second hand is at 0 degrees.
+# Similarly, clockHandAngles(10800) shoud return [90,0,0] as  10800 seconds is equivalent to 3:00:00.
+    arrNew = []
+    hour = (360/12)*q12(seconds/3600)
+    minute = (360/60)*q12(seconds/60)
+    second = (360/60)*q12(seconds)
+    arrNew.append(hour.__floor__())
+    arrNew.append(minute.__floor__())
+    arrNew.append(second.__floor__())
+    return arrNew
 def q14():
-     return 0 
+    return 0 
 def q15():
     return 0 
 def q16():
-     return 0 
+    return 0 
 def q17():
     return 0 
 def q18():
