@@ -255,8 +255,16 @@ def q13(seconds):
 
     
     return arrNew
-def q14():
-    return 0 
+def q14(num):
+    flag = True
+    if num > 1:
+        for i in range(2,num):
+            if (num % i) == 0:
+                flag = False
+                break
+            else:
+                flag = True
+    return flag 
 def q15():
     return 0 
 def q16():
