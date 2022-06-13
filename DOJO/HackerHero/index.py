@@ -233,15 +233,26 @@ def q13(seconds):
 # As review, 260 degrees form a full rotation. Have the degree round up as a whole number (e.g. 38 instead of 37.632)
 # for Inpute 3600 secs (1 hour), return [30,0,0]) meaning the hour hand is at 30 degrees, the minute hand is at 0 degrees, and the second hand is at 0 degrees.
 # Similarly, clockHandAngles(10800) shoud return [90,0,0] as  10800 seconds is equivalent to 3:00:00.
-    arrNew = []
-    h = (360/12)*q12(seconds/3600)
-    m = (360/60)*q12(seconds/60)
-    s = (360/60)*q12(seconds)
-    arrNew.append(h.__floor__())
-    arrNew.append(m.__floor__())
-    arrNew.append(s.__floor__())
+    # h = (360/12)*q12(seconds/3600)
+    # m = (360/60)*q12(seconds/60)
+    # s = (360/60)*q12(seconds)
+    # arrNew.append(h.__floor__())
+    # arrNew.append(m.__floor__())
+    # arrNew.append(s.__floor__())
     # for i in range(3):
     #     arr.append(q12(seconds/60*i))
+    # for i in range(3):
+    #     arrNew.append(seconds/denominations[i]*scaling[i]%360)
+        # arrNew[i] = seconds / denominations[i] * scaling[i]%360
+    import math
+    arrNew = []
+    denominations = [3600,60,1]
+    scaling = [30,6,6]
+
+    for i in range(3):
+        temp = math.ceil(seconds/denominations[i]*scaling[i]%360)
+        arrNew.append(temp)
+
     
     return arrNew
 def q14():
