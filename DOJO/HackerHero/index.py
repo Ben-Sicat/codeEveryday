@@ -300,10 +300,15 @@ def q20(arr):
     secondToLast = arr[-2]
     return secondToLast
     
-def q21():
-     return 0 
-def q22():
-     return 0 
+def q21(arr ,n):
+    converted = n * -1
+    if len(arr) <=2:
+        return None
+    return arr[converted]
+def q22(arr,start, end):
+    for i in range(start, end+1):
+        arr.pop(start)    
+    return arr
 def q23():
      return 0 
 def q24():
