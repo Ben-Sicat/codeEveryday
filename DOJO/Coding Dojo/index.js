@@ -111,3 +111,21 @@
 // // }
 // // console.log(sumOfArray())
 
+// separator = 1
+// if digitNum >= 0:
+//     for i in range(digitNum):
+//         separator = separator*10
+//     remainder = num % separator
+//     num = (num - remainder) /separator
+    
+//     num = num %10
+//     return int(num) 
+// else:
+//     separator = 1
+//     for i in range (0, digitNum, -1):
+//         separator = separator*10
+//     num = num * separator
+//     num = num  - num % 1
+//     num = num %10
+    
+//     return int(num)

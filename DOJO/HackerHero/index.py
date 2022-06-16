@@ -266,34 +266,40 @@ def q14(num):
                 flag = True
     return flag 
 def q15(num, digitNum):
-    separator = 1
-    if digitNum >= 0:
-        for i in range(digitNum):
-            separator = separator*10
-        remainder = num % separator
-        num = (num - remainder) /separator
-        
-        num = num %10
-        return int(num) 
-    else:
-        separator = 1
-        for i in range (0, digitNum, -1):
-            separator = separator*10
-        num = num * separator
-        num = num  - num % 1
-        num = num %10
-        
-        return int(num)
-def q16():
-    return 0 
-def q17():
-    return 0 
-def q18():
-     return 0 
-def q19():
-     return 0 
+    
+    return 0
+def q16(arr):
+    temp =  []
+    for i in range( len(arr)-1, -1, -1):
+        temp.append(arr[i])
+    return temp
+def q17(arr):
+    temp = []
+    for i in arr:
+        if i > min and i < max:
+            temp.append(i)  
+    return temp
+
+def q18(arr1, arr2):
+     return arr1+arr2
+def q19(arr):
+    
+    arrN = []
+    if arr[0] < arr[1]:
+        arrN.append(arr[1])
+    for i in range(1,len(arr)):
+            if arr[i] > arrN[len(arrN)-1]:
+                arrN.append(arr[i])
+    return arrN
 def q20():
-     return 0 
+    index = len(arr) - 1
+
+    if index == 0:
+        return None
+
+    secondToLast = arr[-2]
+    return secondToLast
+    
 def q21():
      return 0 
 def q22():
