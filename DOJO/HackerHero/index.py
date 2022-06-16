@@ -291,7 +291,7 @@ def q19(arr):
             if arr[i] > arrN[len(arrN)-1]:
                 arrN.append(arr[i])
     return arrN
-def q20():
+def q20(arr):
     index = len(arr) - 1
 
     if index == 0:
