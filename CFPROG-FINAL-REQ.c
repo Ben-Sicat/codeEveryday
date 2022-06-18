@@ -1169,17 +1169,25 @@ void SD()
     printf("\n\n \t   Enter your choice here : ");
     scanf("%d", &choice);
     char dish[20][20] = {"Mozzarella sticks", "Fish-and-chips", "French-Fries", "Coleslaw", "Calamares", "Macaroni", "Buttered-Corn"};
-    promptAmount(dish[choice-1],choice);
+    
+    if(choice > 9 || choice < 1){
+      system("cls");
+      printf("\n\n\t\t Invalid Choice Entered\n\n");
+      SD();
+    }else{
+      promptAmount(dish[choice-1],cost[choice-1]);
+    }
+
     
 }
 
-void promptAmount(char dish[], int choice)
+void promptAmount(char dish[], int price)
 {
-  int quantity;
+  int quantity;   
   printf("%s\n", dish);
   printf("Enter Quantity : ");
   scanf("%d", &quantity);
-  total = 69 * quantity ;
+  total = price * quantity ;
   printf("===================================          ");
   printf("\nYour total bill amount is Php.%.2f,\nPayment: CASH\n", total);
   printf("====================================          \n");
@@ -1196,6 +1204,7 @@ void promptAmount(char dish[], int choice)
     printf("\n\n\t\tSorry Invalid Decision Entered\n\n");
     exit(0);
   }
+  system("cls");
 }
 void exit(back)
 {

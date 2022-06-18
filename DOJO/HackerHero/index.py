@@ -328,10 +328,44 @@ def q23(digitArr):
         return True
     else:
         return False
-def q24():
-     return 0 
-def q25():
-     return 0 
+def q24(arr1, arr2):
+    temp = [] 
+    if len(arr1) > len(arr2):
+        print("arr1 is bigger")
+        for i in range(len(arr1)):
+            temp.append(arr1[i])
+            if i < len(arr2):
+                temp.append(arr2[i])
+    if len(arr2) > len(arr1):
+        print("arr2 is bigger")
+        for i in range(len(arr2)):
+            if i < len(arr1):
+                temp.append(arr1[i])
+            temp.append(arr2[i])
+    if len(arr1) == len(arr2):
+        print("same size")
+        for i in range(len(arr1)):
+            temp.append(arr1[i])
+            temp.append(arr2[i])
+    print(temp)
+    return temp
+def q25(string):
+    counter = 0
+    correct = False
+    for i in string:
+        if i == '(':
+            counter +=1
+            print(counter)
+        if i == ')' and counter != 0:
+            correct  = True
+            counter -=1
+            print(")")
+            
+        elif i == ')' and counter == 0:
+            correct =  False
+    if counter != 0:
+        correct = False
+    return correct 
 def q26():
      return 0 
 def q27():

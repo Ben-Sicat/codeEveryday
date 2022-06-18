@@ -109,7 +109,7 @@
 // // 	}
 // // 	return sum; 
 // // }
-// // console.log(sumOfArray())
+//// console.log(sumOfArray())
 
 // separator = 1
 // if digitNum >= 0:
