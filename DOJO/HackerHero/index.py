@@ -366,14 +366,42 @@ def q25(string):
     if counter != 0:
         correct = False
     return correct 
-def q26():
-     return 0 
-def q27():
-     return 0 
+def q26(arr):
+    #bubble sort
+    arr_length =  len(arr) - 1
+    sorted = False
+    while not sorted:
+        sorted = True
+        for i in range (0, arr_length):
+                if arr[i] > arr[i+1]:
+                    sorted = False
+                    arr[i], arr[i+1] =  arr[i+1], arr[i]
+    return arr
+
+def q27(x,y):
+    count = 0
+    multiplier =1
+    while count < y:
+        for i in range(1, x+1):
+            product = i * multiplier
+            print(product)
+        multiplier+=1
+        count+=1
+
 def q28():
      return 0 
-def q29():
-     return 0 
+def q29(row,column):
+    
+    temp =  [["0"]*column for i in range(row)]
+
+    for i in range(column):
+        temp[0][i] = '1'
+        temp[-1][i] = '1'
+        if row> 3:
+            temp[i][0] = '1'
+            temp[i][-1] ='1'
+    return temp
+    
 
 #breathd first search
 
