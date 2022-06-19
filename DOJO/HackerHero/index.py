@@ -405,14 +405,6 @@ def q29(row,column):
 
 #breathd first search
 
-class  Graph:
-    #constructor
-    def __init__ (sef):
-        #default dictionary  to store graph
-        self.graph = defaultdict(list)
-    def addEdge(self,u,v):
-        self.graph[u].append(v)
-
 
 
 print(q13(3600))
