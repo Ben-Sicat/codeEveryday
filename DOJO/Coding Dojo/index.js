@@ -129,3 +129,10 @@
 //     num = num %10
     
 //     return int(num)
+function diag(){
+        for(var i = 0;  i < 5; i++){
+            i++
+            console.log(i)
+        }
+}
+diag()
