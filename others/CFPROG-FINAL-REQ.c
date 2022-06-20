@@ -1,3 +1,4 @@
+// didn't write all of these was just asked to test, check and write some more
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
