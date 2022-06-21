@@ -1,0 +1,112 @@
+body{
+margin:0;
+background-color: black;
+}
+.brick{
+
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background-image: url(assets/brick_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+.coin{
+    background-image: url(assets/coin.gif);
+    background-size: 15px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+.cherry{
+    background-image: url(assets/cherry.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#pacman{
+    background-image: url(assets/pacman.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+
+
+}
+.row div{
+    width:50px;
+    height: 50px;
+    display: inline-block;
+    margin-bottom: -4px;
+    
+}
+.empty{
+
+}
+#score{
+    border: 1rem solid white;
+    width: 10rem;
+    height: 4.7rem;
+    color:white;
+    font-size: 4rem;
+    text-align: center;
+    position: absolute;
+    top: 30rem;
+    left: 10rem
+}
+.container{
+    align-items: center;
+
+}
+#ghost1{
+    /* position:absolute;
+    background-image: url('assets/ghosts.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px; */
+    background-image: url(assets/ghosts.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+#ghost2{
+    /* position:absolute;
+    background-image: url('assets/ghosts.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px; */
+    background-image: url(assets/ghosts.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
+#ghost3{
+    /* position:absolute;
+    background-image: url('assets/ghosts.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px; */
+    background-image: url(assets/ghosts.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40px;
+    width: 40px;
+    position: absolute;
+}
