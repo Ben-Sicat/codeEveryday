@@ -1,6 +1,7 @@
 body{
 margin:0;
 background-color: black;
+font-family: "ＭＳ Ｐゴシック";
 }
 .brick{
 
@@ -49,13 +50,13 @@ background-color: black;
 }
 #score{
     border: 1rem solid white;
-    width: 10rem;
+    width: auto;
     height: 4.7rem;
     color:white;
     font-size: 4rem;
     text-align: center;
     position: absolute;
-    top: 30rem;
+    top: 45rem;
     left: 10rem
 }
 .container{
@@ -109,4 +110,21 @@ background-color: black;
     height: 40px;
     width: 40px;
     position: absolute;
+}
+.gameOver{
+    
+        display: flex;
+        justify-content: center;
+    
+}
+#status{
+    border: 1rem solid black;
+    width: 24rem;
+    height: 5rem;
+    color:white;
+    font-size: 4rem;
+    text-align: center;
+    position: absolute;
+    top: 45rem;
+    left: 30rem
 }
