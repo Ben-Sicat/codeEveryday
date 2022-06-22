@@ -420,7 +420,7 @@ def q29(row,column):
 
 #breathd first search
 
-
+# 0 for ones 1 of tens 2 for hundreds 3 for thousands and so on.
 
 print(q13(3600))
 
