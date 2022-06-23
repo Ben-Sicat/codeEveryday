@@ -324,12 +324,14 @@ def q22(arr,start, end):
     for i in range(start, end+1):
         arr.pop(start)    
     return arr
+    
 def q23(digitArr):
     lElement = digitArr[len(digitArr)-1]
     digitArr.pop(len(digitArr)-1)
     print(lElement)
     print(digitArr)
     sum = 0
+
     for i in range(len(digitArr)-1, -1,-2):
         digitArr[i]= digitArr[i]*2
         if digitArr[i] > 9:
