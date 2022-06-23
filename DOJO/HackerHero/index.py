@@ -324,7 +324,7 @@ def q22(arr,start, end):
     for i in range(start, end+1):
         arr.pop(start)    
     return arr
-    
+
 def q23(digitArr):
     lElement = digitArr[len(digitArr)-1]
     digitArr.pop(len(digitArr)-1)
@@ -418,6 +418,8 @@ def q29(row,column):
             temp[i][0] = '1'
             temp[i][-1] ='1'
     return temp
+
+    print("fuck me bro i cant see straight")
     
 
 #breathd first search
