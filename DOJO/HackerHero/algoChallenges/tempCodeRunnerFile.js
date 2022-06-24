@@ -1,0 +1,1 @@
+arr[arr.length - 1] = 0;
