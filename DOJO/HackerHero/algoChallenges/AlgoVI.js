@@ -48,5 +48,6 @@ function repeatTwice(arr){
         newArr.push(arr[i]);
         newArr.push(arr[i]);
     }
+    
     return newArr;
 }
