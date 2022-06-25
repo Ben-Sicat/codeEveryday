@@ -426,7 +426,21 @@ def q29(row,column):
 
 # 0 for ones 1 of tens 2 for hundreds 3 for thousands and so on.
 
-print(q13(3600))
+# bubble sort 
+
+def bubbleSort(arr):
+    length = len(arr) - 1
+    sorted = False
+
+    while not sorted:
+        sorted = True
+        for i in range(0, length):
+            
+            if arr[i]> arr[i+1]:
+                sorted = False
+                arr[i], arr[i+1] = arr[i+1], arr[i]
+
+
 
 
 
