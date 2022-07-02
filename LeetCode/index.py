@@ -42,4 +42,19 @@ class Solution:
                     index.append(j)
                     return index
 
-    print(twoSum(1, [3,2,4], 6))
+
+    def merge(self, nums1: list[list[int]], m: int, nums2: list[int], n : int) -> None:
+        i = 0
+        j = 0
+        while i < m and j < n:
+            if nums1[i][0] < nums2[j][0]:
+                i += 1
+            else:
+                nums1.insert(i, nums2[j])
+                m += 1
+                j += 1
+        if j < n:
+            nums1[m:] = nums2[j:]
+        return nums1
+    
+    print(merge(1, [1,2,3,0,0,0], 3, [2,5,6], 3))
