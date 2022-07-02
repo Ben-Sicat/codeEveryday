@@ -1,2 +1,1 @@
-def containsDuplicate(self, nums: List[int]) -> bool:
-    #     return len(nums) != len(set(nums))
+    print(merge(1,[1,2,3,0,0,0],3,[2,5,6],3))
