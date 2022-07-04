@@ -69,4 +69,21 @@ class Solution:
                     sorted = False
     print(merge(1,[1,2,3,0,0,0],3,[2,5,6],3))
 
-    
+    def intersect(self, nums1: list[int], nums2: list[int]) -> list[int]:
+        nums1.sort()
+        nums2.sort()
+        print(nums1)
+        print(nums2)
+        i = 0
+        j = 0
+        result = []
+        while i < len(nums1) and j < len(nums2):
+            if nums1[i] == nums2[j]:
+                result.append(nums1[i])
+                i+=1
+                j+=1
+            elif nums1[i] < nums2[j]:
+                i+=1
+            else:
+                j+=1
+        return result
