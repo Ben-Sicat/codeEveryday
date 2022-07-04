@@ -13,20 +13,26 @@ class Solution:
         return self.merge(left, right)
 
     def maxSubArray(self, nums: list[int]) -> int:
-        max_so_far = nums[0]
-        max_ending_here = 0
-        size = len(nums)
-        for i in range(0, size):
-            max_ending_here = max_ending_here + nums[i]
-            if max_ending_here < 0:
-                max_ending_here = 0
-            
-            # Do not compare for all elements. Compare only  
-            # when  max_ending_here > 0
-            elif (max_so_far < max_ending_here):
-                max_so_far = max_ending_here
-                
-        return max_so_far
+        maxSub = nums[0]
+        currSum = 0
+
+        for n in nums:
+            if currSum > 0:
+                currSum = 0
+            currSum += n
+            print("max Sub",maxSub)
+            print("max Sum",currSum)
+            maxSub = max(maxSub, currSum)
+            print(maxSub)
+        return currSum
+        
+
+
+
+
+
+
+
     def twoSum(self, nums: list[int], target: int) -> int:
         size = len(nums)
         index = []
