@@ -27,7 +27,7 @@ class Solution:
         return currSum
         
 
-
+## fucking figure this out...... still dunno how that worked
 
 
 
@@ -68,3 +68,5 @@ class Solution:
                     nums1[I], nums1[I+1] = nums1[I+1], nums1[I]
                     sorted = False
     print(merge(1,[1,2,3,0,0,0],3,[2,5,6],3))
+
+    
