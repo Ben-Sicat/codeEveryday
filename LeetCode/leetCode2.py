@@ -15,4 +15,40 @@ class Solution:
                     col_num = 0
                     row_num+=1
         return out
-                
+    def generatePascal(self, numRow: int) -> List[List[int]]:
+        # if numRow == 0:
+        #     return []
+        # if numRow == 1:
+        #     return [[1]]
+        # out = [[1]]
+        # for i in range(1,numRow):
+        #     row = [1]
+
+        #     for j in range(1,i+1):
+        #         row.append(out[i-1][j-1]+out[i-1][j])
+        #     row.append(1)
+        #     out.append(row)
+        # return out
+        # if numRow == 0:
+        #     return []
+        # elif numRow == 1:
+        #     return [[1]]
+        # out =  [[0 for i in range(numRow)] for j in range(numRow)]
+        # for i in range(1,numRow):
+        #     row = [1]
+        #     for j in range(1,i+1):
+        #         row.append(out[i-1][j-1]+out[i-1][j])
+        #     out.append(row)
+        # return out
+        # use sliding window  technique to calculate the Pascal's triangle
+        res = [[1]]
+        
+        for i in range(numRow -1 ):
+            temp = [0] + res[-1] + [0]
+            
+            row = []
+            for j in range(len(res[-1])+1):
+                row.append(temp[j]+temp[j+1])
+            res.append(row)
+        return res
+        # make use of the logic of pointers
