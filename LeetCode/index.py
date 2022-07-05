@@ -110,3 +110,16 @@ class Solution:
             r+=1
         return maxProfit
     print(maxProfit(1,[7,1,5,3,6,4]))
+    def matrixReshape(self, mat: list[list[int]], r : int, c:int)  -> list[list[int]]:
+       
+        if r*c != len(mat)*len(mat[0]):
+            return mat
+        newMat = []
+        for i in range(r):
+            newMat.append([])
+            for j in range(c):
+                newMat[i].append(0)
+        for i in range(len(mat)):
+            for j in range(len(mat[0])):
+                newMat[i][j] = mat[i][j]
+        return newMat
