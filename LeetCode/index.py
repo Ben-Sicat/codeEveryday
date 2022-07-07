@@ -152,3 +152,6 @@ class Solution:
             else:
                 return True
             return False
+
+array = [[[1,1,1,1,1,1,1]],[1trt1,1],[2,2,2,2,2,2,2],[]]
+arr = [5,3,4,2]
