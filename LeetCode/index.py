@@ -162,3 +162,17 @@ class Solution:
                 return True
             hash.add(num)
         return False
+    
+    def inAnagram(self, s: str, t:str) -> bool:
+        if len(s) != len(t):
+            return False
+        hashS, hashT = {},{}
+
+        for i in range(len(s)):
+            hashS[i] = 1 + hashS.get(s[i],0)
+            hashT[i] = 1 + hashT.get(s[i],0)
+        for c in hashS:
+            if hashS[c] != hashT.get(c,0):
+                return False
+        return True 
+        
