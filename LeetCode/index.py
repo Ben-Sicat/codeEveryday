@@ -154,4 +154,11 @@ class Solution:
             return False
 
 # array = [[[1,1,1,1,1,1,1]],[,1],[2,2,2,2,2,2,2],[]]
-arr = [5,3,4,2]
+    def containsDuplicate (self, nums: list[int]) -> bool:
+        hash = set()
+
+        for num in nums:
+            if num in hash:
+                return True
+            hash.add(num)
+        return False
