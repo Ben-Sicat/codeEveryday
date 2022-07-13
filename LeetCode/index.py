@@ -175,4 +175,12 @@ class Solution:
             if hashS[c] != hashT.get(c,0):
                 return False
         return True 
-        
+## Gonna be experimenting with hashmaps
+
+    def hashMaps():
+        map = {"One" : 7, "Two" : 10, "Three" : 45, "Four" : 23, "Five" : 77 }
+        index = 7
+        sum = map[index] + 10
+        print(sum)
+
+    hashMaps()
