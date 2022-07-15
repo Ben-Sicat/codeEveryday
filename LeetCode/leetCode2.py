@@ -56,3 +56,19 @@ class Solution:
             self.array = {}
             
         # make use of the logic of pointers
+
+        def binary_search(arr: list[int], target: int) -> int: 
+
+            ## goal is to get the target int in the given array with the least possible moves
+            ## but for this case I'll do it first with a binary search
+
+            start_index = 0
+            end_index = len(arr)-1 
+            while start_index <= end_index:
+                midpoint = start_index + (end_index - start_index) // 2
+                midpoint_val = arr[midpoint]
+
+                if midpoint_val == target:
+                    return midpoint_val
+        
+        binary_search()
