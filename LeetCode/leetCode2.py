@@ -1,5 +1,5 @@
 class Solution:
-    def matrixReshape(self, nums: List[List[int]], r: int, c: int) -> List[List[int]]:
+    def matrixReshape(self, nums: list[list[int]], r: int, c: int) -> list[list[int]]:
         curr_rows = len(nums)
         curr_columns = len(nums[0])
         if (r*c) != (curr_rows*curr_columns):
@@ -15,7 +15,7 @@ class Solution:
                     col_num = 0
                     row_num+=1
         return out
-    def generatePascal(self, numRow: int) -> List[List[int]]:
+    def generatePascal(self, numRow: int) -> list[list[int]]:
         # if numRow == 0:
         #     return []
         # if numRow == 1:
@@ -52,23 +52,36 @@ class Solution:
             res.append(row)
         return res
 
-        def random_function(self):
-            self.array = {}
-            
-        # make use of the logic of pointers
-
-        def binary_search(arr: list[int], target: int) -> int: 
-
-            ## goal is to get the target int in the given array with the least possible moves
-            ## but for this case I'll do it first with a binary search
-
-            start_index = 0
-            end_index = len(arr)-1 
-            while start_index <= end_index:
-                midpoint = start_index + (end_index - start_index) // 2
-                midpoint_val = arr[midpoint]
-
-                if midpoint_val == target:
-                    return midpoint_val
+    def random_function(self):
+        self.array = {}
         
-        binary_search()
+    # make use of the logic of pointers
+
+    def binary_search(arr: list[int], target: int) -> int: 
+
+        ## goal is to get the target int in the given array with the least possible moves
+        ## but for this case I'll do it first with a binary search
+
+        start_index = 0
+        end_index = len(arr)-1 
+        while start_index <= end_index:
+            midpoint = start_index + (end_index - start_index) // 2
+            midpoint_val = arr[midpoint]
+
+            if midpoint_val == target:
+                print(arr)
+                return midpoint_val
+                
+            elif target < midpoint_val:
+                end_index = midpoint -1
+                print(arr)
+            elif target > midpoint_val:
+                start_index = midpoint + 1
+                print(arr)
+        return -1
+    arr = [1,2,3,4,5,6,7,8,9,10]
+    target = 7
+    print(binary_search(arr,target))
+    
+    def breatdth_search(self):
+        test = None
