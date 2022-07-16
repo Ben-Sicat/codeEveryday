@@ -83,5 +83,5 @@ class Solution:
     target = 7
     print(binary_search(arr,target))
     
-    def breatdth_search(self):
+    def breadth_search(self):
         test = None
