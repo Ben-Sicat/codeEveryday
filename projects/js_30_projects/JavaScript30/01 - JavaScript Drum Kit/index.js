@@ -4,6 +4,7 @@ function playSound(e) {
     if (!audio) return; 
     audio.currentTime = 0; 
     key.classList.add('playing');
+    audio.play();
   }
   function removeTransition(e) {
     if (e.propertyName !== 'transform') return; 
