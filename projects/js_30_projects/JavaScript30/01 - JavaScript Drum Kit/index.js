@@ -9,6 +9,7 @@ window.addEventListener('keydown',function(e){
     audio.play();
 
     key.classList.add('playing')
+    
     // next step is to target classnames to change the stylying on keydown
 
    console.log(key.classList)
