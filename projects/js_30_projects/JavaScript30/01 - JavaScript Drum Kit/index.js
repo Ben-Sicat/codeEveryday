@@ -11,7 +11,7 @@ window.addEventListener('keydown',function(e){
     key.classList.add('playing')
     // next step is to target classnames to change the stylying on keydown
 
-   
+   console.log(key.classList)
 
     //gotta create a function to remove the transition
 
