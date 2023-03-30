@@ -1,4 +1,5 @@
 let win = ''
+let cherry_up = false
 let world1 = [
     [2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2],
     [2,0,1,1,2,1,1,1,1,1,1,2,1,1,1,1,1,1,1,2,1,1,1,1,2],
@@ -84,10 +85,10 @@ let enemies = {
     x3:17,
     y3:6
 }
-// let maps = [world1,world2,world3,world4,world5]
-// var map = Math.floor(Math.random() *5);
+let maps = [world1,world2,world3,world4,world5]
+var map = Math.floor(Math.random() *5);
 
-let world = test,iteration = 0;
+let world = maps[map],iteration = 0;
 let includesOne
 var counter = 0
 function displayWorld(){
@@ -108,7 +109,7 @@ function displayWorld(){
                 
                 if(iteration < 1){
                     counter++
-                    console.log("coin")
+                
                 //console.log(counter)
                 }
                 
@@ -128,7 +129,7 @@ function displayWorld(){
     }
     iteration++
     document.getElementById('world').innerHTML = output
-    console.log("counter1: "+ counter)
+    
 }
 
 displayWorld()
@@ -140,7 +141,7 @@ function displayPacman(){
     document.getElementById('pacman').style.left = pacman.x*50+'px';
 
 }
-console.log("counter1: "+ counter)
+
 
 function displayGhosts(){
     
@@ -161,7 +162,6 @@ function displayScore(){
 }
 
  document.onkeydown = function movement(e){
-    console.log(pacman.alive)
     if(pacman.alive){
         if(e.keyCode == 37 && world[pacman.y][pacman.x-1] != 2){
             pacman.x--
@@ -184,6 +184,10 @@ function displayScore(){
         }
         if(world[pacman.y][pacman.x] == 3){
             world[pacman.y][pacman.x] = 0
+            console.log("wtf")
+            document.body.style.backgroundColor = "red";
+            cherry_up = true
+            
             score+=20
             displayWorld()
         }
@@ -192,33 +196,83 @@ function displayScore(){
         displayScore()
         GameOver()
         winner()
+        setTimeout(() => {
+            cherry_up = false
+            document.body.style.backgroundColor = "black"; // change cherry_up to false after 10 seconds
+            }, 10000); // 10 seconds in milliseconds
+                }
+                console.log(cherry_up)
+            }
         
+
         
-        console.log(e.keyCode)
-    }
-}
-console.log(counter)
+
 function GameOver(){
     if(enemies.y1 == pacman.y && enemies.x1 == pacman.x){
-        status()
-        pacman.alive = false 
-        win = 'false'
+      console.log(cherry_up)
+        if(cherry_up == true){
+            document.getElementById('ghost1').style.top = enemies.y1*0+"px";
+            document.getElementById('ghost1').style.left = enemies.x1*0+'px';
+            enemies.x1 = 0
+            enemies.y1 = 0
+            win=''
+            displayGhosts()
+            displayWorld()
+        }else{
+            pacman.alive = false 
+            win = 'false'
+            clearInterval(ghost1)
+            clearInterval(ghost2)
+            clearInterval(ghost3)
+            status()
+        }
+        
         
         
     }
     if(enemies.y2 == pacman.y && enemies.x2 == pacman.x){
         
-        status()
-        pacman.alive = false
-        win = 'false'
+        
+        if(cherry_up == true){
+            document.getElementById('ghost2').style.top = enemies.y2*0+"px";
+            document.getElementById('ghost2').style.left = enemies.x2*0+'px';
+            enemies.x2 = 0
+            enemies.y2 = 0
+            win = ''
+            displayGhosts()
+            displayWorld()
+        }else{
+            pacman.alive = false 
+            win = 'false'
+            clearInterval(ghost1)
+            clearInterval(ghost2)
+            clearInterval(ghost3)
+            status()
+        }
+        
         
     
     }
     if(enemies.y3 == pacman.y && enemies.x3 == pacman.x){
         
-        status()
-        pacman.alive = false
-        win = 'false'
+        
+        if(cherry_up == true){
+            document.getElementById('ghost3').style.top = enemies.y3*0+"px";
+            document.getElementById('ghost3').style.left = enemies.x3*0+'px';
+            enemies.x3 = 0
+            enemies.y3 = 0
+            win = ''
+            displayGhosts()
+            displayWorld()
+        }else{
+            pacman.alive = false 
+            win = 'false'
+            clearInterval(ghost1)
+            clearInterval(ghost2)
+            clearInterval(ghost3)
+            status()
+        }
+        
     }
     
 }
@@ -234,7 +288,7 @@ function winner(){
 }
 
 function status(){
-    console.log(win)
+
     
      if (win == 'true'){
         document.getElementById('status').innerHTML = 'YOU WIN';
